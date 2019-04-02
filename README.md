@@ -10,13 +10,13 @@
 
   Response：（JSON）
       {
-      "status": true,
-      "message": "http://v.douyin.com/jJub3C/ ",
+      "status": true,\n
+      "message": "http://v.douyin.com/jJub3C/ ",\n
       "user_name": "@DJI 大疆创新",
-      "description": "#前方高能 不要眨眼！",
-      "imgurl": "https://p3.pstatp.com/large/1d35f00015501740f447b.jpg",
-      "user_headimg": "https://p3.pstatp.com/thumb/6c530001ce5f9e9207fe",
-      "url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0",
-      "url_wm": "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0"
+      "description": "#前方高能 不要眨眼！",\n
+      "imgurl": "https://p3.pstatp.com/large/1d35f00015501740f447b.jpg",\n
+      "user_headimg": "https://p3.pstatp.com/thumb/6c530001ce5f9e9207fe",\n
+      "url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0",\n
+      "url_wm": "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0"\n
       }
         
