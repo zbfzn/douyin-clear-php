@@ -8,9 +8,10 @@
  ==
   请求方式：GET  
   --
-  请求参数：url：http://v.douyin.com/jJub3C/ 或 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！
+  请求参数：  
+  --
+  url：http://v.douyin.com/jJub3C/ 或 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容）  
---
 
   Response：JSON数据  
   --
