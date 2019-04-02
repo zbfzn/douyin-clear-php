@@ -41,7 +41,7 @@
     url:无水印地址  
     url_wm:有水印地址  
 
-"**喜欢的话，给个star呗**"
+**喜欢的话，给个star呗**
 
 ![image](https://github.com/zbfzn/douyin-clear-php/blob/master/douyin/douyin-no-wm.png) 
 <font>注：仅供学习,切勿用于其他用途</font>测试站点：https://lyfzn.top/plugins/douyin/videoPrase/
