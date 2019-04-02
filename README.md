@@ -8,7 +8,7 @@
   请求参数：url：http://v.douyin.com/jJub3C/ 或 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容）  
 
-  Response：JSON数据
+  Response：JSON数据  
 <code>请求成功：{
 "status": true,
 "message": "http://v.douyin.com/jJub3C/ ",
@@ -19,6 +19,7 @@
 "url": "https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0", 
 "url_wm": "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300ffb0000biabmhqhh3mrpo38d760&line=0"  
       }</code>  
+      
 <code>请求失败：{
 	"status": false,
 	"message": "地址错误: http:// 复制此链接，打开【抖音短视频】，直接观看视频！"
