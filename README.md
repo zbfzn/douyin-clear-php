@@ -1,14 +1,19 @@
 # douyin-clear-php
 抖音去水印PHP版接口  
 使用方法：  
+==
     将文件夹放到站点目录即可。  
  ********
-文档：  
+ 文档： 
+ ==
   请求方式：GET  
+  --
   请求参数：url：http://v.douyin.com/jJub3C/ 或 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容）  
+--
 
   Response：JSON数据  
+  --
 <code>请求成功：{
 "status": true,
 "message": "http://v.douyin.com/jJub3C/ ",
@@ -35,5 +40,7 @@
     url:无水印地址  
     url_wm:有水印地址  
 
+**喜欢的话，给个star呗**
+
 ![image](https://github.com/zbfzn/douyin-clear-php/blob/master/douyin/douyin-no-wm.png) 
-<font>注：仅供学习，切勿用于其他用途</font>测试站点：https://lyfzn.top/plugins/douyin/videoPrase/
+<font>注：仅供学习,切勿用于其他用途</font>测试站点：https://lyfzn.top/plugins/douyin/videoPrase/
