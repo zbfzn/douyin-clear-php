@@ -9,8 +9,8 @@
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容）
 
   Response：（JSON）
-      : {
-      : "status": true,
+  : {
+  : "status": true,
       "message": "http://v.douyin.com/jJub3C/ ",
       "user_name": "@DJI 大疆创新",
       "description": "#前方高能 不要眨眼！",
