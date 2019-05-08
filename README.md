@@ -38,7 +38,7 @@
 ````
 
     参数：
-    `status`:请求状态码true/false  
+    status`:请求状态码true/false  
     message:提示文本，返回结果错误时会返回地址信息  
     user_name:抖音昵称  
     description:视频描述  
