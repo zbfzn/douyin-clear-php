@@ -2,11 +2,13 @@
 抖音去水印PHP版接口  
 
 修复5.29无法解析的问题
+源码已上传
 
 
 使用方法：  
 ==
-    header请求头和cookie涉及我个人隐私，故暂时不放源码，你们也可以直接使用我的接口 https://lyfzn.top/api/douyinApi/?url=
+    ./parseByLink.php?url=视频分享地址
+    （喜欢给个star呗┗( ▔, ▔ )┛）
  ********
  文档： 
  ==
