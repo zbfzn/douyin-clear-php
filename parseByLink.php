@@ -33,7 +33,7 @@ function getVideoData($api,$cookie,$awemeId){
                 "Cookie: ".$cookie,
                 "Host: api-hl.amemv.com",
                 "Connection: Keep-Alive",
-                "User-Agent: okhttp/3.10.0.1");//header请求头和cookie，请自己获取（涉及个人隐私，故不放出来），你也可以直接使用我的接口 https://lyfzn.top/api/douyinApi/?url=
+                "User-Agent: okhttp/3.10.0.1");
 
     $data=json_decode(doCurlGetRequest($api.$awemeId,$header),true);
 
