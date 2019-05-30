@@ -63,6 +63,7 @@
     status:请求状态码true/false  
     message:提示文本，返回结果错误时会返回地址信息  
     nickname:抖音昵称  
+    awemeId：视频资源Id
     info:视频信息 
     image:封面图片地址  
     headImage:用户头像地址  
