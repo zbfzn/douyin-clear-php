@@ -1,10 +1,12 @@
 # douyin-clear-php
 抖音去水印PHP版接口  
 
+修复5.29无法解析问题
+
 
 使用方法：  
 ==
-    将文件夹放到站点目录即可。  
+    header请求头和cookie涉及我个人隐私，故暂时不放源码，你们也可以直接使用我的接口 https://lyfzn.top/api/douyinApi/?url=
  ********
  文档： 
  ==
