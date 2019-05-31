@@ -71,6 +71,9 @@
     headImage:用户头像地址  
     urls:无水印地址  
     music_urls:音乐原声地址  
+    
+    
+    需要登录Cookie的可以准备一个抖音账号连同密码发送至我的邮箱（foreverfzn@163.com）,看到我会给你们抓取。（不需要请忽略）
 
 **喜欢的话，给个star呗**
 
