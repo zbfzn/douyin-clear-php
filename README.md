@@ -77,6 +77,8 @@
 
 **喜欢的话，给个star呗**
 
+衍生项目：  
+==
 安卓版项目地址：https://github.com/zbfzn/douyinquick  
 
 
