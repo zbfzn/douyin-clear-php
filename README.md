@@ -2,7 +2,7 @@
 抖音去水印PHP版接口  
 
 修复5.29无法解析的问题  
-源码已上传
+源码已上传  
 19-06-04:接口变更（https://aweme.snssdk.com/aweme/v1/aweme/detail/），修复完成
 
 使用方法：  
