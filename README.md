@@ -4,7 +4,7 @@
 修复5.29无法解析的问题  
 源码已上传  
 19-06-04:接口变更（https://aweme.snssdk.com/aweme/v1/aweme/detail/）  
-19-06-05：新增长视频，封装userId、抖音id  
+19-06-05：新增长视频，userId、抖音id  
 
 使用方法：  
 ==
