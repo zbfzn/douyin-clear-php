@@ -5,6 +5,7 @@
 源码已上传  
 19-06-04:接口变更（https://aweme.snssdk.com/aweme/v1/aweme/detail/）  
 19-06-05：新增长视频，userId、抖音id  
+最近不太稳定，等一等吧  
 
 使用方法：  
 ==
