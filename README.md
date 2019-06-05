@@ -134,8 +134,8 @@
     music_urls:音乐原声地址 
     dynamic_cover:动态封面图（19-06-05加）  
     long_video:长视频（完整视频信息（19-06-05加）  
-    userId:作者userId  
-    shortId：作者抖音Id  
+    userId:作者userId（19-06-05加）  
+    shortId：作者抖音Id（19-06-05加）  
     
     
    接口验证机制貌似是一个app_log向服务器发送设备信息，使用通过验证的设备信息发起请求（目前了解cookie可以去掉，但user-agent不能为电脑的UA，且接口稳定性待测试，如有间歇性无法使用请反馈给我）
