@@ -67,7 +67,8 @@ function getVideoData($api,$cookie,$awemeId){
         'urls'=>$urls,
 		'long_video'=>$longVideo,
         'music_urls'=>$music_urls,
-        'info'=>$info
+        'info'=>$info,
+	    'ts'=>$time
     ];
     return json_encode($douyin);
 
@@ -76,7 +77,7 @@ function getVideoData($api,$cookie,$awemeId){
 if(strstr($url_g,'http://v.douyin.com/')) {
     $url_g = getLinkFromDouyinShareText($url_g);
     $awemeId=getAwemeId($url_g,$user_agent);
-    echo getVideoData($api_new,$cookie,$awemeId);
+    echo getVideoData($api,null,$awemeId);
 
 }else{
     echo json_encode(["status"=>false,"message"=>"地址无效"]);
