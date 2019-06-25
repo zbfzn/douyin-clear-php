@@ -6,7 +6,7 @@
 19-06-04:接口变更（https://aweme.snssdk.com/aweme/v1/aweme/detail/）  
 19-06-05：新增长视频，userId、抖音id  
 19-06-13：提供几个可用API，在apis.txt里，源代码的api不能使用时换一个即可  
-19-06-25：3种接口失效自动切换（注：官方APP在某些时候也会出现不能解析出视频链接的情况，此情况下若你的APP能识别并解析分享链接，而接口解析不出来的话请反馈给我，接口抓取请参照https://github.com/zbfzn/douyin-clear-php/issues/5）  
+19-06-25：3种接口失效自动切换（注：官方APP在某些时候也会出现不能解析出视频链接的情况，此情况下若你的APP能识别并解析分享链接，而接口解析不出来的话请反馈给我，接口抓取请参照https://github.com/zbfzn/douyin-clear-php/issues/5 ）  
 
 使用方法：  
 ==
