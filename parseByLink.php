@@ -1,7 +1,8 @@
 <?php
 header("Content-Type:text/html;charset=utf-8");
 $url_g=@$_GET['url'];//抖音视频地址
-$api="https://api-hl.amemv.com/aweme/v1/aweme/detail/?retry_type=no_retry&iid=43619087057&device_id=57318346369&ac=wifi&channel=update&aid=1128&app_name=aweme&version_code=251&version_name=2.5.1&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=251&resolution=1080*1920&dpi=480&update_version_code=2512&as=a115996edcf39c7adf4355&cp=9038c058c7f6e4ace1IcQg&mas=01af833c02eb8913ecc7909389749e6d89acaccc2c662686ecc69c&aweme_id=";
+$api="https://aweme.snssdk.com/aweme/v1/aweme/detail/?retry_type=no_retry&iid=74655440239&device_id=57318346369&ac=wifi&channel=wandoujia&aid=1128&app_name=aweme&version_code=140&version_name=1.4.0&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=140&resolution=1080*1920&dpi=1080&update_version_code=1400&ts=1560245644&as=a125372f1c487cb50f&cp=728dcc5bc7f4f558e1&aweme_id=";
+$apis=null;
 $user_agent="Mozilla/5.0 (Linux; Android 8.0.0; MI 6 Build/OPR1.170623.027; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36";
 
 function getLinkFromDouyinShareText($shareOrUrl){
@@ -28,6 +29,7 @@ function doCurlGetRequest($url,$headers,$timeout = 5){
     return curl_exec($con);
 }
 function getVideoData($api,$cookie,$awemeId){
+    global $apis;
     $header=array("Accept-Encoding: utf-8",
                 "Cookie: ".$cookie,
                 "User-Agent: okhttp/3.10.0.1"
@@ -35,8 +37,20 @@ function getVideoData($api,$cookie,$awemeId){
 
 	$time=time();
 	$_rticket=$time.'139';
-    $data=json_decode(doCurlGetRequest($api.$awemeId."&ts=$time"."&_rticket=$_rticket",$header),true);
+	$contex=stream_context_create(array('http'=>array('header'=>$header)));
+    $data=json_decode(doCurlGetRequest($api.$awemeId."&ts=$time"."&_rticket=$_rticket",$header),true);//curl使用
+//    $data=json_decode(file_get_contents($api.$awemeId."&ts=$time"."&_rticket=$_rticket",0,$contex),true);//未开启curl使用
 
+    if(!@$data['aweme_detail']['author']['short_id']){
+        $api=$apis['api_251'][0];
+        $data=json_decode(doCurlGetRequest($api.$awemeId,$header),true);
+//        $data=json_decode(file_get_contents($api.$awemeId."&ts=$time"."&_rticket=$_rticket",0,$contex),true);//未开启curl使用
+    }
+    if(!@$data['aweme_detail']['author']['short_id']){
+        $api=$apis['api_140'][0];
+        $data=json_decode(doCurlGetRequest($api.$awemeId,$header),true);
+//        $data=json_decode(file_get_contents($api.$awemeId."&ts=$time"."&_rticket=$_rticket",0,$contex),true);//未开启curl使用
+    }
 
 
 	$detail=@$data['aweme_detail'];
@@ -68,8 +82,15 @@ function getVideoData($api,$cookie,$awemeId){
 		'long_video'=>$longVideo,
         'music_urls'=>$music_urls,
         'info'=>$info,
-	    'ts'=>$time
+        'ts'=>$time
     ];
+	if($urls==null&&$user_name==null){
+	    $error=[
+	        'status'=>false,
+            'message'=>'抖音接口调用失败'
+        ];
+	    return json_encode($error);
+    }
     return json_encode($douyin);
 
 }
@@ -77,7 +98,8 @@ function getVideoData($api,$cookie,$awemeId){
 if(strstr($url_g,'http://v.douyin.com/')) {
     $url_g = getLinkFromDouyinShareText($url_g);
     $awemeId=getAwemeId($url_g,$user_agent);
-    echo getVideoData($api,null,$awemeId);
+    $apis=json_decode(file_get_contents("./apis.json"),true);
+    echo getVideoData($apis['api_650'][0],null,$awemeId);
 
 }else{
     echo json_encode(["status"=>false,"message"=>"地址无效"]);
