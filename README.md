@@ -124,6 +124,12 @@
     "message": "地址无效"
 }
 ````
+````json
+{
+   "status": false
+   "message": "抖音接口调用失败",
+}
+````
 
     参数：
     status:请求状态码true/false  
