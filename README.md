@@ -126,8 +126,8 @@
 ````
 ````json
 {
-   "status": false
-   "message": "抖音接口调用失败",
+   "status": false,
+   "message": "抖音接口调用失败"
 }
 ````
 
