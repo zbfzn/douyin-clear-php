@@ -21,8 +21,8 @@
   --
   请求参数：  
   --
-  url：http://v.douyin.com/jJub3C/ 或 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！
-都行。（地址前面不能带\#号，服务器会忽略\#后面的内容）  
+  url：http://v.douyin.com/jJub3C/ 、 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！或者 https://www.iesdouyin.com/share/video/6670812435382865166/?region=CN&mid=6609134742988131076&u_code=hgd1c58i&titleType=title&utm_source=copy_link&utm_campaign=client_share&utm_medium=android&app=aweme&iid=67144120646&timestamp=1554178524
+都行。（地址前面不能带\#号，服务器会忽略\#后面的内容，建议在本地对URL做处理）  
   isFormat:是否格式化数据，0为不格式化，默认：格式化  
   
   Response：JSON  
