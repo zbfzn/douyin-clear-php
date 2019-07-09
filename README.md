@@ -138,7 +138,7 @@
 
     参数：
     status:请求状态码true/false  
-    message:提示文本，返回结果错误时会返回地址信息  
+    errorMes:错误信息  
     data:返回的数据都在这里面  
     nickname:抖音昵称  
     awemeId：视频资源Id
