@@ -2,7 +2,8 @@
 header("Content-Type:text/html;charset=utf-8");
 error_reporting(0);
 $url=@$_GET['url'];//抖音视频地址
-$isFormat=@$_GET['isFormat'];//是否格式化数据
+$isFormat=@$_GET['isFormat'];//是否格式化数据，默认true
+$old=@$_GET['old'];//是否使用旧版数据格式，默认false
 class Douyin{
     private $UA="Mozilla/5.0 (Linux; Android 8.0.0; MI 6 Build/OPR1.170623.027; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36";
     private function getSubstr($str, $leftStr, $rightStr){
@@ -70,7 +71,7 @@ class Douyin{
         return $videoData;
 
     }
-    private function parseVideoByLink($url,$isFormat){
+    private function parseVideoByLink($url,$isFormat,$old){
         $awemeId=$this->getAwemeId($url,$this->UA);
         $api_position=-1;
         $apis=[
@@ -100,6 +101,16 @@ class Douyin{
             if(!$isSuccess){
                 return $this->getOutPutForError("抖音接口调用失败");
             }
+            if($old){
+                if($isFormat) {
+                    $out = $this->getFormatVideoData($data['aweme_detail']);
+                }else{
+                    $out=$data['aweme_detail'];
+                }
+            $out['status']=true;
+            $out['api_position']=$api_position;
+            return json_encode($out);
+            }
             $out=[
                 'status'=>true,
                 'data'=>null,
@@ -107,27 +118,27 @@ class Douyin{
             ];
             if($isFormat) {
                 $out['data'] = $this->getFormatVideoData($data['aweme_detail']);
-                return json_encode($out);
             }else{
                 $out['data']=$data['aweme_detail'];
-                return json_encode($out);
             }
+            return json_encode($out);
         }
         return $this->getOutPutForError('链接不正确');
     }
-    private function checkParams($url,&$isFormat){
+    private function checkParams($url,&$isFormat,&$old){
         if(empty($url)) return false;
         if($isFormat==null) $isFormat=true;
+        if($old==null) $old=false;
         return true;
     }
-    function get($url,$isFormat){
-        $pass=$this->checkParams($url,$isFormat);
+    function get($url,$isFormat,$old){
+        $pass=$this->checkParams($url,$isFormat,$old);
         if(!$pass)
             return $this->getOutPutForError("地址无效");
         else
-            return $this->parseVideoByLink($url,$isFormat);
+            return $this->parseVideoByLink($url,$isFormat,$old);
     }
 }
 
 $douyin=new Douyin();
-echo $douyin->get($url,$isFormat);
+echo $douyin->get($url,$isFormat,$old);
