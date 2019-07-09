@@ -126,13 +126,13 @@
 ````json
 {
     "status": false,
-    "message": "地址无效"
+    "errorMes": "地址无效"
 }
 ````
 ````json
 {
    "status": false,
-   "message": "抖音接口调用失败"
+   "errorMes": "抖音接口调用失败"
 }
 ````
 
