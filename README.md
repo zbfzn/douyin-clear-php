@@ -7,7 +7,7 @@
 19-06-05：新增长视频，userId、抖音id  
 19-06-13：提供几个可用API，在apis.txt里，源代码的api不能使用时换一个即可  
 19-06-25：3种接口失效自动切换（注：官方APP在某些时候也会出现不能解析出视频链接的情况，此情况下若你的APP能识别并解析分享链接，而接口解析不出来的话请反馈给我，接口抓取请参照https://github.com/zbfzn/douyin-clear-php/issues/5 ）  
-19-07-10：优化代码结构，删除一些不必要的代码，取消curl
+19-07-10：优化代码结构，删除一些不必要的代码，取消curl，对旧数据格式保留  
 
 使用方法：  
 ==
@@ -24,6 +24,7 @@
   url：http://v.douyin.com/jJub3C/ 、 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！或者 https://www.iesdouyin.com/share/video/6670812435382865166/?region=CN&mid=6609134742988131076&u_code=hgd1c58i&titleType=title&utm_source=copy_link&utm_campaign=client_share&utm_medium=android&app=aweme&iid=67144120646&timestamp=1554178524
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容，建议在本地对URL做处理）  
   isFormat:是否格式化数据，0为不格式化，默认：格式化  
+  old:是否使用旧版数据格式，0为不使用，默认：不使用  
   
   Response：JSON  
   --
@@ -118,6 +119,7 @@
             "share_link_desc": "#在抖音，记录美好生活#高铁商务座和普通座到底什么区别，一节车厢竟只有5个座位，太爽#vlog美食记 #抖音玩乐攻略  %s 复制此链接，打开【抖音短视频】，直接观看视频！"
         }
     },
+    "dataType_new":true,
     "api_position": 0
 }
       
@@ -152,6 +154,7 @@
     userId:作者userId（19-06-05加）  
     shortId：作者抖音Id（19-06-05加）  
     api_position:具体使用的api的下标（19-07-10加）  
+    dataType_new:当前数据格式是否为新格式（19-07-10加）  
     
     
    如有间歇性无法使用请反馈给我。经测试，有时候APP也会出现无法解析的情况，这种情况可以换低版本的API试试。    
