@@ -109,12 +109,14 @@ class Douyin{
                 }
             $out['status']=true;
             $out['api_position']=$api_position;
+            $out['dataType_new']=!old;
             return json_encode($out);
             }
             $out=[
                 'status'=>true,
                 'data'=>null,
-                'api_position'=>$api_position
+                'api_position'=>$api_position,
+                'dataType_new'=>!old
             ];
             if($isFormat) {
                 $out['data'] = $this->getFormatVideoData($data['aweme_detail']);
