@@ -11,6 +11,8 @@
 
 # 注意  
 本人的iid和device_id经常被封，导致断断续续不能使用，这种情况更换这两个参数即可  
+好心人也可以共享一下你的iid和device_id，参与维护项目。GET方式： 
+http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=GitHub用户名  
 
 使用方法：  
 ==
