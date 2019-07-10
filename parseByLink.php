@@ -75,9 +75,9 @@ class Douyin{
         $awemeId=$this->getAwemeId($url,$this->UA);
         $api_position=-1;
         $apis=[
-            "https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&iid=43619087057&device_id=57318346369&ac=wifi&channel=update&aid=1128&app_name=aweme&version_code=251&version_name=2.5.1&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=251&resolution=1080*1920&dpi=480&update_version_code=2512&ts=1561136204&as=a1e500706c54fd8c8d&cp=004ad55fc8d60ac4e1&aweme_id=",
+            "https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&iid=40848822342&device_id=56150513062&ac=wifi&channel=update&aid=1128&app_name=aweme&version_code=251&version_name=2.5.1&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=251&resolution=1080*1920&dpi=480&update_version_code=2512&ts=1561136204&as=a1e500706c54fd8c8d&cp=004ad55fc8d60ac4e1&aweme_id=",//更换设备信息
             "https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&iid=74655440239&device_id=57318346369&ac=wifi&channel=wandoujia&aid=1128&app_name=aweme&version_code=140&version_name=1.4.0&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=140&resolution=1080*1920&dpi=1080&update_version_code=1400&ts=1561136201&as=a13520b0e9c40d9cbd&cp=064fdf579fdd07cae1&aweme_id=",
-            "https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&iid=75364831157&device_id=68299559251&ac=wifi&channel=wandoujia&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=xiaomi+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&openudid=2e5c5ff4ce710faf&manifest_version_code=660&resolution=1080*1920&dpi=480&update_version_code=6602&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1561136206&as=a1257080aec45ddcad&cp=0b4cd25fe4d00ccfe1&aweme_id=",
+            "https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&iid=75364831157&device_id=68299559251&ac=wifi&channel=wandoujia&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=xiaomi+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&openudid=2e5c5ff4ce710faf&manifest_version_code=660&resolution=1080*1920&dpi=480&update_version_code=6602&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1561136206&as=a1257080aec45ddcad&cp=0b4cd25fe4d00ccfe1&aweme_id="
         ];
         $header=array("Accept-Encoding: utf-8",
             "User-Agent: okhttp/3.10.0.1"
@@ -107,16 +107,16 @@ class Douyin{
                 }else{
                     $out=$data['aweme_detail'];
                 }
-            $out['status']=true;
-            $out['api_position']=$api_position;
-            $out['dataType_new']=!old;
-            return json_encode($out);
+                $out['status']=true;
+                $out['api_position']=$api_position;
+                $out['dataType_new']=!old;
+                return json_encode($out);
             }
             $out=[
                 'status'=>true,
                 'data'=>null,
                 'api_position'=>$api_position,
-                'dataType_new'=>!old
+                'dataType_new'=>!$old
             ];
             if($isFormat) {
                 $out['data'] = $this->getFormatVideoData($data['aweme_detail']);
