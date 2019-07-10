@@ -12,7 +12,7 @@
 使用方法：  
 ==
     环境：php（本人v7.2）
-    ./parseByLink.php?url=视频分享地址&isFormat=1
+    ./parseByLink.php?url=视频分享地址&isFormat=1&old=0
     （喜欢给个star呗┗( ▔, ▔ )┛）
  ********
  文档： 
