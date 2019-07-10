@@ -83,11 +83,11 @@ class Douyin{
             "User-Agent: okhttp/3.10.0.1"
         );
         $context=stream_context_create(array("http"=>array("header"=>$header)));
-        $ts=time();
-        $_rticket=$ts.'182';
         if($awemeId){
             $isSuccess=false;
             foreach ($apis as $api){
+                $ts=time();
+                $_rticket=$ts.'182';
                 $api_position++;
                 $data=json_decode(file_get_contents($api.$awemeId."&ts=$ts&_rticket=$_rticket",0,$context),true);
                 $detail=@$data['aweme_detail'];
