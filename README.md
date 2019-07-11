@@ -8,9 +8,10 @@
 19-06-13：提供几个可用API，在apis.txt里，源代码的api不能使用时换一个即可  
 19-06-25：3种接口失效自动切换（注：官方APP在某些时候也会出现不能解析出视频链接的情况，此情况下若你的APP能识别并解析分享链接，而接口解析不出来的话请反馈给我，接口抓取请参照https://github.com/zbfzn/douyin-clear-php/issues/5 ）  
 19-07-10：优化代码结构，删除一些不必要的代码，取消curl，对旧数据格式保留  
+19-07-11：优化api获取流程，增加iid、device_id便捷管理，如遇接口失效，请自行查找对应参数替换txt内容  
 
 # 注意  
-本人的iid和device_id经常被封，导致断断续续不能使用，这种情况更换这两个参数即可  
+本人的iid和device_id经常被封，导致断断续续不能使用    
 好心人也可以共享一下你的iid和device_id，参与维护项目。GET方式： 
 http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=GitHub用户名  
 
@@ -125,7 +126,8 @@ http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=
         }
     },
     "dataType_new":true,
-    "api_position": 0
+    "api_position": 0,
+    "error_api":null
 }
       
 ````
@@ -160,9 +162,9 @@ http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=
     shortId：作者抖音Id（19-06-05加）  
     api_position:具体使用的api的下标（19-07-10加）  
     dataType_new:当前数据格式是否为新格式（19-07-10加）  
+    error_api：用到的API中不能使用的索引值，对应TXT文件的顺序，没有错误返回null（19-07-11加）  
     
-    
-   如有间歇性无法使用请反馈给我。经测试，有时候APP也会出现无法解析的情况，这种情况可以换低版本的API试试。    
+   如有间歇性无法使用请先更换douyinDevice.txt的内容再试，都无法使用再提issue。    
 
 **喜欢的话，给个star呗**
 
