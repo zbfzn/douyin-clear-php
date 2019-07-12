@@ -9,6 +9,8 @@
 19-06-25：3种接口失效自动切换（注：官方APP在某些时候也会出现不能解析出视频链接的情况，此情况下若你的APP能识别并解析分享链接，而接口解析不出来的话请反馈给我，接口抓取请参照https://github.com/zbfzn/douyin-clear-php/issues/5 ）  
 19-07-10：优化代码结构，删除一些不必要的代码，取消curl，对旧数据格式保留  
 19-07-11：优化api获取流程，增加iid、device_id便捷管理，如遇接口失效，请自行查找对应参数替换txt内容  
+19-07-12：修正message与errorMes参数  
+
 
 # 注意  
 本人的iid和device_id经常被封，导致断断续续不能使用    
@@ -29,8 +31,8 @@ http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=
   --
   url：http://v.douyin.com/jJub3C/ 、 http://v.douyin.com/jJub3C/ 复制此链接，打开【抖音短视频】，直接观看视频！或者 https://www.iesdouyin.com/share/video/6670812435382865166/?region=CN&mid=6609134742988131076&u_code=hgd1c58i&titleType=title&utm_source=copy_link&utm_campaign=client_share&utm_medium=android&app=aweme&iid=67144120646&timestamp=1554178524
 都行。（地址前面不能带\#号，服务器会忽略\#后面的内容，建议在本地对URL做处理）  
-  isFormat:是否格式化数据，0为不格式化，默认：格式化  
-  old:是否使用旧版数据格式，0为不使用，默认：不使用  
+  isFormat:是否格式化数据，0为不格式化，1为格式化。默认：格式化  
+  old:是否使用旧版数据格式，0为不使用，1为格式化。默认：不使用  
   
   Response：JSON  
   --
@@ -147,7 +149,8 @@ http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=
 
     参数：
     status:请求状态码true/false  
-    errorMes:错误信息  
+    errorMes:错误信息（old=0时出错会有） 
+    message: old=1时出现，没有错误返回url参数，否则返回错误信息  
     data:返回的数据都在这里面  
     nickname:抖音昵称  
     awemeId：视频资源Id
