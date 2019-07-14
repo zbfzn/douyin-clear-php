@@ -10,6 +10,7 @@
 19-07-10：优化代码结构，删除一些不必要的代码，取消curl，对旧数据格式保留  
 19-07-11：优化api获取流程，增加iid、device_id便捷管理，如遇接口失效，请自行查找对应参数替换txt内容  
 19-07-12：修正message与errorMes参数  
+19-07-14：douyin 综合版接口上线，不免费。详情查看 http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php
 
 
 # 注意  
