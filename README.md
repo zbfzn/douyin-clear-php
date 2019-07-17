@@ -15,8 +15,9 @@
 
 # 注意  
 本人的iid和device_id经常被封，导致断断续续不能使用    
-好心人也可以共享一下你的iid和device_id，参与维护项目。GET方式： 
-http://lyfzn.top/api/douyinApi/uploadDevice.php?iid=值&device_id=值&user_name=GitHub用户名  
+好心人也可以共享一下你的iid和device_id，参与维护项目。
+站点：http://lyfzn.top/api/douyinApi/deviceUpdate/  
+参与维护的人员可以随时查看云端有效的iid和device_id  
 **转载请注明出处*
 
 使用方法：  
