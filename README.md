@@ -10,7 +10,8 @@
 19-07-10：优化代码结构，删除一些不必要的代码，取消curl，对旧数据格式保留  
 19-07-11：优化api获取流程，增加iid、device_id便捷管理，如遇接口失效，请自行查找对应参数替换txt内容  
 19-07-12：修正message与errorMes参数  
-19-07-14：douyin 综合版接口上线，不免费。详情查看 http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php
+19-07-14：douyin 综合版接口上线，不免费。详情查看 http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php  
+19-07-24：优化代码，增加680、251、140版本信息切换，新增参数：
 
 
 # 注意  
@@ -132,7 +133,8 @@
     },
     "dataType_new":true,
     "api_position": 0,
-    "error_api":null
+    "error_api":null,
+    "api_version":"680"
 }
       
 ````
@@ -169,6 +171,7 @@
     api_position:具体使用的api的下标（19-07-10加）  
     dataType_new:当前数据格式是否为新格式（19-07-10加）  
     error_api：用到的API中不能使用的索引值，对应TXT文件的顺序，没有错误返回null（19-07-11加）  
+    api_version：当前使用的api版本信息（680/251/140）
     
    如有间歇性无法使用请先更换douyinDevice.txt的内容再试，都无法使用再提issue。    
 
