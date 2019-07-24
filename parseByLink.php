@@ -96,7 +96,7 @@ class Douyin
 
     private function getDevices()
     {
-        return explode("\n", str_replace("\r", "", file_get_contents("./douyinDevice.txt")));//去除制表符
+        return explode("\n", str_replace("\r", "", file_get_contents("./douyinDevice.txt")));
     }
 
     private function getVersions()
