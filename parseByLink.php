@@ -79,7 +79,7 @@ class Douyin{
         return explode("\n",file_get_contents("./douyinDevice.txt"));
     }
     private function getApis($deviceInfos,$api_n,&$api_positions){
-        $base_api="https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&{}&ac=wifi&channel=update&aid=1128&app_name=aweme&version_code=251&version_name=2.5.1&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=251&resolution=1080*1920&dpi=480&update_version_code=2512&ts=1561136204&as=a1e500706c54fd8c8d&cp=004ad55fc8d60ac4e1&aweme_id=";
+        $base_api="https://aweme.snssdk.com/aweme/v1/aweme/detail/?origin_type=link&retry_type=no_retry&{}&ac=wifi&channel=update&aid=1128&app_name=aweme&version_code=680&version_name=6.8.0&device_platform=android&ssmix=a&device_type=MI+8&device_brand=xiaomi&language=zh&os_api=22&os_version=5.1.1&uuid=865166029463703&openudid=ec6d541a2f7350cd&manifest_version_code=251&resolution=1080*1920&dpi=480&update_version_code=2512&ts=1561136204&as=a1e500706c54fd8c8d&cp=004ad55fc8d60ac4e1&aweme_id=";
         $apis=[];
         $devices_size=sizeof($deviceInfos);
         for($i=0;$i<($devices_size<$api_n?$devices_size:$api_n);$i++){
