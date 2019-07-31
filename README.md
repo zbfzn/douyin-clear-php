@@ -11,7 +11,8 @@
 19-07-11：优化api获取流程，增加iid、device_id便捷管理，如遇接口失效，请自行查找对应参数替换txt内容  
 19-07-12：修正message与errorMes参数  
 19-07-14：douyin 综合版接口上线，不免费。详情查看 http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php  
-19-07-24：优化代码，增加680、251、140版本信息切换，新增参数：
+19-07-24：优化代码，增加680、251、140版本信息切换，新增参数：api_version  
+19-07-31：适配来自作者动态的分享短链接如: http://v.douyin.com/ABErWB/ ,感谢 [5wcx](https://github.com/5wcx) 的反馈 
 
 
 # 注意  
