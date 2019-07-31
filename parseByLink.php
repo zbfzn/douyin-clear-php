@@ -1,5 +1,9 @@
 <?php
 /**
+ * GitHub公开版
+ */
+
+/**
  * Created by zbfzn,My GitHub: https://github.com
  * 依赖文件douyinDevice.txt
  */
@@ -96,7 +100,7 @@ class Douyin
 
     private function getDevices()
     {
-        return explode("\n", str_replace("\r", "", file_get_contents("./douyinDevice.txt")));
+        return explode("\n", str_replace("\r", "", file_get_contents("./douyinDevice.txt")));//去除回车\r
     }
 
     private function getVersions()
@@ -178,7 +182,11 @@ class Douyin
                     $api_position = $api_positions[$count];
                     $data = json_decode(file_get_contents($api . $awemeId, 0, $context), true);
                     $detail = @$data['aweme_detail'];
-                    $short_id = @$data['aweme_detail']['author']['short_id'];
+                    $forward_item=@$detail['forward_item'];
+                    if($detail&&$forward_item){//用户动态的分享链接
+                        $detail=$forward_item;
+                    }
+                    $short_id=@$detail['author']['short_id'];
                     if ($detail && $short_id) {
                         $isSuccess = true;
                         break;
@@ -203,33 +211,33 @@ class Douyin
             if (!$isSuccess) {
                 return $this->getOutPutForError("抖音接口调用失败$str_position", $old);
             }
-            if ($old) {
-                if ($isFormat) {
-                    $out = $this->getFormatVideoData($data['aweme_detail']);
-                } else {
-                    $out['data'] = $data['aweme_detail'];
+            if($old){
+                if($isFormat) {
+                    $out = $this->getFormatVideoData($detail);
+                }else{
+                    $out['data']=$detail;
                 }
-                $out['status'] = true;
-                $out['message'] = $url;
-                $out['api_position'] = $api_position;
-                $out['error_api'] = $str_position;
-                $out['api_version'] = $api_version;
-                $out['dataType_new'] = !$old;
+                $out['status']=true;
+                $out['message']=$url;
+                $out['api_position']=$api_position;
+                $out['error_api']=$str_position;
+                $out['api_version']=$api_version;
+                $out['dataType_new']=!$old;
                 return json_encode($out);
-            } else {
-                $out = [
-                    'status' => true,
-                    'message' => $url,
-                    'data' => null,
-                    'api_position' => $api_position,
-                    'api_version' => $api_version,
-                    'dataType_new' => !$old,
-                    'error_api' => $str_position
+            }else{
+                $out=[
+                    'status'=>true,
+                    'message'=>$url,
+                    'data'=>null,
+                    'api_position'=>$api_position,
+                    'api_version'=>$api_version,
+                    'dataType_new'=>!$old,
+                    'error_api'=>$str_position
                 ];
-                if ($isFormat) {
-                    $out['data'] = $this->getFormatVideoData($data['aweme_detail']);
-                } else {
-                    $out['data'] = $data['aweme_detail'];
+                if($isFormat) {
+                    $out['data'] = $this->getFormatVideoData($detail);
+                }else{
+                    $out['data']=$detail;
                 }
                 return json_encode($out);
             }
