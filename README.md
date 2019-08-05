@@ -183,5 +183,5 @@
 安卓版项目地址：https://github.com/zbfzn/douyinquick  
 
 
-<font>注：仅供学习,切勿用于其他用途。</font>测试站点：https://lyfzn.top/plugins/douyin/videoPrase/  
-**禁止大量调用测试接口**
+<font>注：仅供学习,切勿用于其他用途。</font>  
+**测试站点关闭,需要测试请前往：http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php 第三个接口**
