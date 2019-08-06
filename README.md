@@ -184,4 +184,4 @@
 
 
 <font>注：仅供学习,切勿用于其他用途。</font>  
-**测试站点关闭,需要测试请前往：http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php 第三个接口**
+**测试站点关闭,需要测试请前往：http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php 第三个接口；不提供免费解析服务。**
