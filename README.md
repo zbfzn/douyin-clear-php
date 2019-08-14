@@ -12,7 +12,8 @@
 19-07-12：修正message与errorMes参数  
 19-07-14：douyin 综合版接口上线，不免费。详情查看 http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php  
 19-07-24：优化代码，增加680、251、140版本信息切换，新增参数：api_version  
-19-07-31：适配来自作者动态的分享短链接如: http://v.douyin.com/ABErWB/ ,感谢 [5wcx](https://github.com/5wcx) 的反馈 
+19-07-31：适配来自作者动态的分享短链接如: http://v.douyin.com/ABErWB/ ,感谢 [5wcx](https://github.com/5wcx) 的反馈   
+19-08-14：抖音更新，大家可以用我之前的旧版本获取网页端无水印视频：https://github.com/zbfzn/douyin-clear-php/tree/05e53cca6862dff2ec49033675990930720b8ca4 （无水印链接是url_wm,此版本没有完整视频解析，如需使用完整视频请等待修复）  
 
 
 # 注意  
