@@ -15,6 +15,7 @@
 19-07-31：适配来自作者动态的分享短链接如: http://v.douyin.com/ABErWB/ ,感谢 [5wcx](https://github.com/5wcx) 的反馈   
 19-08-14：抖音更新，大家可以用我之前的旧版本获取网页端无水印视频：https://github.com/zbfzn/douyin-clear-php/tree/05e53cca6862dff2ec49033675990930720b8ca4 （无水印链接是url_wm,此版本没有完整视频解析，如需使用完整视频请等待修复）  
 19-08-17：抖音解析已正常，如有需要，查看综合版接口  http://api.lyfzn.top/douyinApi/LimitAPi/douyinDoc.php  
+19-08-26：上线抖音、快手等无水印接口，详情戳：http://api.lyfzn.top/shortVideoParse/doc/  
 
 
 # 注意  
