@@ -1,3 +1,6 @@
+# 项目迁移
+本项目已迁移至 [MediaQuickServer](https://github.com/zbfzn/MediaQuickServer): 支持抖音、快手短视频及图集解析。
+
 # douyin-clear-php
 抖音去水印PHP版接口  
 
@@ -18,8 +21,6 @@
 19-08-26：上线抖音、快手等无水印接口，详情戳：http://api.lyfzn.top/shortVideoParse/doc/  
 20-04-07：快手(sig,_NStokensig)、抖音（as/cp/mas,x-gorgon,x-STUB,设备注册）Url加签，详情戳：http://api.lyfzn.top/ZBApi/sign/doc/
 
-# 项目迁移
-[MediaQuickServer](https://github.com/zbfzn/MediaQuickServer): 支持抖音、快手短视频及图集解析。
 
 # 注意  
 本人的iid和device_id经常被封，导致断断续续不能使用    
